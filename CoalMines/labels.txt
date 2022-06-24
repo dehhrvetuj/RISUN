@@ -1,0 +1,169 @@
+name
+url
+country
+Operator
+Owner
+Location
+GPS Coordinates
+Status
+Production Capacity
+Total Resource
+Mineable Reserves
+Coal type
+Mine Size
+Mine Type
+Start Year
+Source of Financing
+Coordinates
+Mine status
+Start year
+Production capacity (Mtpa)
+Total reserves (Mt)
+Mine type
+Mine size (Km2)
+Workforce size
+Primary consumer
+Source of financing
+Mining Method
+Parent company
+GPS coordinates
+Mineable reserves
+Mine size
+Production
+Additional proposed production
+Equipment
+Number of employees
+Sponsor
+Parent Company
+Minable Reserves
+Mine Depth
+Capacity
+Production (2020)
+Resource
+Reserves
+Total reserves
+Owners
+Workforce Size
+Total Reserves
+Coal Type
+Workforce
+Total Resources
+Capacity (Mtpa)
+Mine Employment
+Type of coal
+Mining method
+Recoverable Reserves
+Owners (Mount Thorley)
+Owners (Warkworth)
+Expansion Capacity
+Employment
+capacity (Mtpa)
+Total Reserve
+Proposed Expansion
+Type
+Start date
+Consumer
+Reserve
+Productive Capacity
+Projected in service
+Mineable Reserve
+Gross Capacity
+Mine Production
+Coal Source
+Coal Reserves
+Life of Mine
+Permits and applications
+Mine depth
+Mine Status
+Number of Employees
+Closure year
+Retirement year
+Development costs
+Development Costs
+Retirement Year
+Coal Plant
+Permits and Applications
+Permits
+Resources
+In service
+Coal plant
+Production'
+Proven reserves
+Extractable Reserves
+Proposed in service
+Prodiction
+Totl Resource
+US$1,699,065,518
+Prodution
+Coal Linkage
+Number of Workers
+Total Resource Reserves
+Parent
+Estimated annual CO
+Environmental assessments
+Mine Depths
+Production capacity
+Year
+Start year’
+Production Expansion
+Status Proposed
+Annual Capacity
+Coal Resources
+Current Production Capacity
+Proposed Production Capacity
+Developer
+Prodcution
+Proposed Capacity
+Additional Proposed Capacity
+Mine method
+Proposed Production
+Coal reserves
+Geological Resserves
+Expansion
+Coal field
+Closure
+End Year
+Mineable Resource
+Power Plant
+Production (2019)
+Total Resource' 30.8 Mt (Measured and Indicated, 2018)
+Additional Capacity
+Life of the mines
+MSHA ID
+Controller
+Union
+County
+State
+Latitude
+Longitude
+Production (short tons)
+Average No. of Employees
+2007 Production (short tons)
+2010 Production (short tons)
+MSHA id
+2020 Production
+Recoverable reserves
+
+Employees
+2018 Production (short tons)
+GPS Cooridnates
+Coordinates,
+Production (Short tons)
+Mining Type
+Annual Production
+MSHA
+2020 Production (short tons)
+No. of Employees
+Established/Acquired
+Transportation
+Coorindates
+Parent company of the operator
+Power station
+Operator's parent company
+Probable reserves
+Owner of the coalfield
+Mineable reserve
+Sponsors
+Detailed status
+Power Station
+Projected operation
