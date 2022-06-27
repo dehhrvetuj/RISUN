@@ -1,18 +1,42 @@
 
 gps_ind = ['GPS Coordinates', 'Coordinates', 'GPS coordinates','Coorindates',
               'GPS Cooridnates', 'Coordinates,']
+
 status_ind = ['Status', 'Mine status', 'Mine Status']       # Detailed status
+
 coal_type_ind = ['Coal type', 'Coal Type', 'Type of coal']
+
 mine_type_ind = ['Mine Type', 'Mine type', 'Type', 'Mining Type']
-mine_size_ind = ['Mine size','Mine size (Km2)', 'Mine size']
+mine_size_ind = ['Mine Size', 'Mine size (Km2)', 'Mine size']
+mine_method_ind= ['Mining Method', 'Mining method', 'Mine method']
 
-start_ind = ['Start Year', 'Start year', 'Start date']
+start_year_ind = ['Start Year', 'Start year', 'Start date', 'In service',
+                  'Proposed in service', 'Projected operation']
+end_year_ind = ['Closure year', 'Retirement year', 'Retirement Year', 'Closure', 'End Year']
+
 owner_ind = ['Owner', 'Owners', 'Owner of the coalfield']   #'Owners (Mount Thorley) # Owners (Warkworth)'
-
-prod_cap = ['Production Capacity', 'Production capacity (Mtpa)']
-
+operator_ind = ['Operator']
+sponsor_ind = ['Sponsor','Sponsors']
 parent_ind = ['Parent company', 'Parent Company', 'Parent',
               'Parent company of the operator', "Operator's parent company"]
+
+prod_short_ind = ['Production (short tons)','2010 Production (short tons)',
+                  '2018 Production (short tons)','Production (Short tons)']
+
+prod_short_ind = ['Production (short tons)','2010 Production (short tons)',
+                  '2018 Production (short tons)','Production (Short tons)']
+prod_metric_ind = ['Prodcution','Production','Prodiction','Prodution',"Production'",
+                   'Production (2019)','Production (2020)','2020 Production','Mine Production',
+                   'Annual Production']
+
+prod_cap_mtpa_ind = ['Production capacity (Mtpa)', 'Capacity (Mtpa)', 'capacity (Mtpa)']
+
+prod_cap_ind = ['Production Capacity', 'Capacity', 'Productive Capacity', 'Production capacity',
+                    'Current Production Capacity', 'Annual Capacity', 'Production capacity (Mtpa)',
+                    'Capacity (Mtpa)', 'capacity (Mtpa)']
+
+
+
 
 
 # Resource
@@ -60,21 +84,16 @@ parent_ind = ['Parent company', 'Parent Company', 'Parent',
 # Production'
 # Production (2019)
 # Production (2020)
+# 2020 Production
 # Mine Production
+# Annual Production
 # Production (short tons)
 # 2007 Production (short tons)
 # 2010 Production (short tons)
-# 2020 Production
 # 2018 Production (short tons)
 # Production (Short tons)
-# Annual Production
 # 2020 Production (short tons)
-
 # Additional proposed production
-
-
-# Sponsor
-# Sponsors
 
 
 # Capacity
@@ -119,6 +138,8 @@ parent_ind = ['Parent company', 'Parent Company', 'Parent',
 # Mine depth
 # Mine Depths
 
+# Sponsor
+# Sponsors
 
 # Developer
 
