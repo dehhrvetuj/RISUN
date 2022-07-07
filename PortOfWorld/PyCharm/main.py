@@ -64,37 +64,93 @@ from ports_wiki_contents import ports_global_content
 
 
 from searchwikicontents import *
+#
+# for port,code in zip(ports_global_content,list(df['CODE'])):
+#
+#     contents = port['wiki_content']
+#
+#     port['code'] = str(code).replace(' ','')
+#
+#     if contents is None:
+#         port['location'] = None
+#         port['cargo'] = None
+#         port['container'] = None
+#         continue
+#
+#     country = [SearchForCountry(item) for item in contents]
+#     country = ''.join([item for item in country if item is not None])
+#
+#     location = [SearchForLocation(item) for item in contents]
+#     location = ''.join([item for item in location if item is not None])
+#
+#     latti = [SearchForCoordinates(item,'lattitude') for item in contents]
+#     latti = ''.join([item for item in latti if item is not None])
+#
+#     longi = [SearchForCoordinates(item,'longitude') for item in contents]
+#     longi = ''.join([item for item in longi if item is not None])
+#
+#     cargo = [SearchForCargo(item) for item in contents]
+#     cargo = ''.join([item for item in cargo if item is not None])
+#
+#     container = [SearchForContainer(item) for item in contents]
+#     container = ''.join([item for item in container if item is not None])
+#
+#     port['location'] = location
+#     port['cargo'] = cargo
+#     port['container'] = container
+#
+#     # print(':'.join([country, port['name'], port['name2'], location, latti, longi, cargo, container]))
+#     # print(port['name'], country, latti, longi, cargo, container)
+#
+#
+# output = pd.DataFrame(ports_global_content)
+# output = output[['name','name2','code','cargo','container']]
+# output.to_excel('ports_cargo_container.xlsx')
 
-for port in ports_global_content:
+ports_cargo_container = pd.read_excel('ports_cargo_container.xlsx')
+ports_all_world = pd.read_excel('ports_all_world.xlsx')
 
-    contents = port['wiki_content']
+# print(ports_all_world)
+# print(ports_cargo_container)
 
-    if contents is None:
-        continue
-
-    country = [SearchForCountry(item) for item in contents]
-    country = ''.join([item for item in country if item is not None])
-
-    location = [SearchForLocation(item) for item in contents]
-    location = ''.join([item for item in location if item is not None])
-
-    latti = [SearchForCoordinates(item,'lattitude') for item in contents]
-    latti = ''.join([item for item in latti if item is not None])
-
-    longi = [SearchForCoordinates(item,'longitude') for item in contents]
-    longi = ''.join([item for item in longi if item is not None])
-
-    cargo = [SearchForCargo(item) for item in contents]
-    cargo = ''.join([item for item in cargo if item is not None])
-
-    container = [SearchForContainer(item) for item in contents]
-    container = ''.join([item for item in container if item is not None])
-
-    print(':'.join([country, port['name'], port['name2'], location, latti, longi, cargo, container]))
-    # print(port['name'], country, latti, longi, cargo, container)
+sig_lst_code = list(ports_cargo_container['code'])
+sig_lst_name = [name.strip().lower() for name in list(ports_cargo_container['name'])]
+sig_lst_name2 = [name.strip().lower() for name in list(ports_cargo_container['name2'].apply(lambda x: str(x).replace('Port','').replace('of','').replace('Harbor','').strip()))]
 
 
-# print(re.findall(r"\-?\d+°\d+′\d+″[NS]", '29°56′13″N'))
+def FindCorrespondingIndexByCode(code):
+    global sig_lst_code
+    if code in sig_lst_code:
+        return sig_lst_code.index(code)
+    else:
+        return None
 
-# print(SearchForCountry(['Country', '\xa0', 'Ukraine']))
+def FindCorrespondingIndexByName(name):
+    global sig_lst_name, sig_lst_name2
+    name = name.strip().lower()
+    if name in sig_lst_name:
+        return sig_lst_name.index(name)
+    elif name in sig_lst_name2:
+        return sig_lst_name2.index(name)
+    else:
+        return None
+
+
+# ports_all_world['sig_code'] = ports_all_world['code'].apply(lambda x: True if x in sig_lst_code else False)
+# ports_all_world['sig_name'] = ports_all_world['name'].apply(lambda x: True if x in sig_lst_name or x in sig_lst_name2 else False)
+#
+# ports_all_world['significance'] = ports_all_world['sig_code'] | ports_all_world['sig_name'] #| ports_all_world['sig_name2']
+#
+# ports_all_world.drop(columns=['sig_code', 'sig_name'], inplace=True)
+
+ports_all_world['Correspond Index'] = ports_all_world['code'].apply(lambda x: FindCorrespondingIndexByCode(x))
+ports_all_world['Correspond Index'].fillna(ports_all_world['name'].apply(lambda x: FindCorrespondingIndexByName(x)), inplace=True)
+
+ports_all_world['Annual Cargo'] = ports_all_world['Correspond Index'].apply(lambda x: None if pd.isnull(x) else ports_cargo_container['cargo'][x])
+# ports_all_world['binary'] = ports_all_world['Correspond Index'].apply(lambda x: False if pd.isnull(x) else True)
+
+
+# print(ports_all_world)
+ports_all_world.to_excel('hahhaha2.xlsx')
+
 
